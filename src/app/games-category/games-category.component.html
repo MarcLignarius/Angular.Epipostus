@@ -1,8 +1,7 @@
 <div>
-    <div class="post-box" *ngFor="let post of postsToDisplay">
+    <div class="post-box" *ngFor="let post of postsToDisplay" (click)="goToPostDetail(post)">
       <p class="post-category">{{post.category}}</p>
       <h2 class="post-title">{{post.title}}</h2>
       <p class="post-author">post author</p>
-      <p class="post-body">{{post.body}}</p>
     </div>
   </div>

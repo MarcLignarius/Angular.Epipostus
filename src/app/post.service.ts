@@ -11,7 +11,7 @@ export class PostService {
     return this.masterPostList;
   }
 
-  getPostsById(postId: number){
+  getPostById(postId: number){
     for (var i = 0; i <= this.masterPostList.length - 1; i++) {
       if (this.masterPostList[i].postId === postId) {
         return this.masterPostList[i];

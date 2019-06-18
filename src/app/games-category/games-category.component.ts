@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Params } from '@angular/router';
-import { Location } from '@angular/common';
+import { Router } from '@angular/router';
 
 import { Post } from '../post.model';
 import { PostService } from '../post.service';
@@ -16,9 +15,8 @@ export class GamesCategoryComponent implements OnInit {
   postsToDisplay: Post[] = [];
 
   constructor(
-    private route: ActivatedRoute, 
-    private location: Location, 
-    private postService: PostService
+    private postService: PostService,
+    private router: Router
   ) { }
 
   ngOnInit() {
@@ -26,8 +24,10 @@ export class GamesCategoryComponent implements OnInit {
     this.postService.addPosts(12, 'games'),
     this.postService.addPosts(8, 'poker'),
     this.postsToDisplay = this.postService.getPostsByCategory('games');
-    console.log(this.postsToDisplay);
-    
   }
+
+  goToPostDetail(clickedPost: Post) {
+    this.router.navigate(['games', clickedPost.postId]);
+  };
 
 }

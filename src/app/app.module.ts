@@ -9,6 +9,7 @@ import { HomeComponent } from './home/home.component';
 import { MusicCategoryComponent } from './music-category/music-category.component';
 import { GamesCategoryComponent } from './games-category/games-category.component';
 import { PokerCategoryComponent } from './poker-category/poker-category.component';
+import { PostDetailComponent } from './post-detail/post-detail.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { PokerCategoryComponent } from './poker-category/poker-category.componen
     HomeComponent,
     MusicCategoryComponent,
     GamesCategoryComponent,
-    PokerCategoryComponent
+    PokerCategoryComponent,
+    PostDetailComponent
   ],
   imports: [
     BrowserModule,
