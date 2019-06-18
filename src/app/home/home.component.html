@@ -1,3 +1,8 @@
-<p>
-  home works!
-</p>
+<div>
+  <div class="post-box" *ngFor="let post of posts">
+    <p class="post-category">{{post.category}}</p>
+    <h2 class="post-title">{{post.title}}</h2>
+    <p class="post-author">post author</p>
+    <p class="post-body">{{post.body}}</p>
+  </div>
+</div>

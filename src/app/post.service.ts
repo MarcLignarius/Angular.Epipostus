@@ -11,6 +11,25 @@ export class PostService {
     return this.masterPostList;
   }
 
+  getPostsById(postId: number){
+    for (var i = 0; i <= this.masterPostList.length - 1; i++) {
+      if (this.masterPostList[i].postId === postId) {
+        return this.masterPostList[i];
+      }
+    }
+  }
+
+  getPostsByCategory(category: string){
+    let posts = []; 
+    
+    for (var i = 0; i <= this.masterPostList.length - 1; i++) {
+      if (this.masterPostList[i].category == category) {
+        posts.push(this.masterPostList[i]);
+      }
+    }
+    return posts;
+  }
+
   // mock post template
   buildMockPost(): Post {
     const newPost = new Post();
